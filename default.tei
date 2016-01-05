@@ -17,9 +17,12 @@
             <availability>
                <licence>$license$</licence>
             </availability>
+	    $endif$
          </publicationStmt>
          <sourceDesc>
+	   $if(sourceDesc)$
 	   $sourceDesc$
+	   $endif$
          </sourceDesc>
       </fileDesc>
    </teiHeader>
