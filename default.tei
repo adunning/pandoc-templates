@@ -4,15 +4,14 @@
       <fileDesc>
          <titleStmt>
            <title>$if(title)$$title$$endif$</title>
+	   $if(author)$$author$$endif$
          </titleStmt>
          <publicationStmt>
-           <publisher></publisher>
+           $if(publisher)$<publisher>$publisher$</publisher>$endif$
 	   $if(date)$<date>$date$</date>$endif$
-$if(license)$
-           <availability>
+$if(license)$<availability>
              <licence>$license$</licence>
-           </availability>
-$endif$
+           </availability>$endif$
          </publicationStmt>
          <sourceDesc>
 $if(sourceDesc)$
