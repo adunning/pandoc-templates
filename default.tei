@@ -4,7 +4,6 @@
       <fileDesc>
          <titleStmt>
            <title>$if(title)$$title$$endif$</title>
-<<<<<<< HEAD
 	   $if(author)$$author$$endif$
          </titleStmt>
          <publicationStmt>
@@ -13,17 +12,6 @@
 $if(license)$<availability>
              <licence>$license$</licence>
            </availability>$endif$
-=======
-         </titleStmt>
-         <publicationStmt>
-           <publisher></publisher>
-	   $if(date)$<date>$date$</date>$endif$
-$if(license)$
-           <availability>
-             <licence>$license$</licence>
-           </availability>
-$endif$
->>>>>>> 23f9ed542953c616b2c42370b31ac46122644ca6
          </publicationStmt>
          <sourceDesc>
 $if(sourceDesc)$
