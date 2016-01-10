@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-           <title>$if(title)$$title$$endif$</title>
-	   $if(author)$$author$$endif$
-         </titleStmt>
-         <publicationStmt>
-           $if(publisher)$<publisher>$publisher$</publisher>$endif$
-	   $if(date)$<date>$date$</date>$endif$
-$if(license)$<availability>
-             <licence>$license$</licence>
-           </availability>$endif$
-         </publicationStmt>
-         <sourceDesc>
-$if(sourceDesc)$
-$sourceDesc$
-$else$
-	   <p>Produced by pandoc.</p>
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+$if(title)$
+      <title>$title$</title>
 $endif$
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <text>
-     <body>
-       $body$
-      </body>
-   </text>
+$for(author)$
+      <author>$author$</author>
+$endif$
+    </titleStmt>
+    <publicationStmt>
+$if(publisher)$
+      <publisher>$publisher$</publisher>
+$endif$
+$if(date)$
+      <date>$date$</date>
+$endif$
+$if(license)$
+      <availability><licence>$license$</licence></availability>
+$endif$
+    </publicationStmt>
+    <sourceDesc>
+$if(sourceDesc)$
+      $sourceDesc$
+$else$
+      <p>Produced by pandoc.</p>
+$endif$
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>
+<text>
+$for(include-before)$
+$include-before$
+$endfor$
+<body>
+$body$
+</body>
+$for(include-after)$
+$include-after$
+$endfor$
+</text>
 </TEI>
